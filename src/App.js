@@ -6,7 +6,9 @@ function App() {
   return (
     <div>
       <NavigationBar/>
+      <div className='container-main'>
       <UserInfo/>
+      </div>
     </div>
   )
 }

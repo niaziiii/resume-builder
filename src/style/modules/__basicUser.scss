@@ -1,0 +1,60 @@
+
+.container-main{
+    background-color: black;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.UserBasic-Form{
+    background-color: white;
+    padding: 2rem;
+    color: rgb(80, 77, 77);
+    text-align: center;
+    border-radius: 10px;
+   
+}
+.UserBasic-Form h1{
+    margin: 1rem 0;
+}
+.UserBasic-Form button{
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.inputsContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: .3rem 0;
+    height: 5rem;
+}
+
+.inputsContainer input[type="date"]{
+    flex: 0 0 40%;
+    padding: 0 .5rem;
+    height: 3rem;
+    align-self: center;
+    margin: 0 .6rem;
+    border: 1px solid rgb(204, 201, 201);
+}
+
+@media screen and (max-width: 800px) {
+  .UserBasic-Form{
+    height: 100%;
+    min-height: auto;
+    border-radius: 0%;
+  }   
+}
+@media screen and (max-width: 500px) {
+    .inputsContainer{
+        padding: .3rem 0;
+        height: auto;
+        flex-direction: column;
+    }    
+  
+    
+}
