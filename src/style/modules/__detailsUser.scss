@@ -1,0 +1,11 @@
+.previ-next-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    // padding: 0 1rem;
+    align-items: flex-end;
+    button{
+        width: 7rem;
+        padding: .3rem 0 !important;
+    }
+}

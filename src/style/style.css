@@ -61,4 +61,14 @@
     height: auto;
     flex-direction: column;
   }
+}
+.previ-next-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+.previ-next-button button {
+  width: 7rem;
+  padding: 0.3rem 0 !important;
 }/*# sourceMappingURL=style.css.map */
