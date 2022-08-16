@@ -3,5 +3,38 @@
     padding: 0%;
 }
 
+
 @import './modules/_basicUser';
 @import './modules/_detailsUser';
+
+.custom-container-input{
+    margin:  0 auto;
+
+}
+.inputsContainer{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+textarea{
+    height: 5rem;
+    padding: .5rem;
+    border: none;
+    outline: 0.001rem solid gray;
+    outline: 0.001rem solid gray;
+    border-radius: 3px;
+    margin-top: 1rem;
+    &:active,
+    &:visited,
+    &:focus{
+    outline: 2px solid blue;
+    }
+}
+@media screen and (max-width:600px) {
+    .inputsContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

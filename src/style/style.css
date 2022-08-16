@@ -31,23 +31,6 @@
   cursor: pointer;
 }
 
-.inputsContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0.3rem 0;
-  height: 5rem;
-}
-
-.inputsContainer input[type=date] {
-  flex: 0 0 40%;
-  padding: 0 0.5rem;
-  height: 3rem;
-  align-self: center;
-  margin: 0 0.6rem;
-  border: 1px solid rgb(204, 201, 201);
-}
-
 @media screen and (max-width: 800px) {
   .UserBasic-Form {
     height: 100%;
@@ -62,6 +45,10 @@
     flex-direction: column;
   }
 }
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: transparent !important;
+}
+
 .previ-next-button {
   display: flex;
   flex-direction: row;
@@ -71,4 +58,68 @@
 .previ-next-button button {
   width: 7rem;
   padding: 0.3rem 0 !important;
+}
+
+.select-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem;
+  flex: 0 0 46%;
+}
+.select-input label {
+  flex: 1;
+}
+.select-input div {
+  flex: 2;
+}
+
+@media screen and (max-width: 600px) {
+  .previ-next-button {
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .previ-next-button button {
+    width: auto;
+    margin: 0% !important;
+    padding: 0.5rem 1rem !important;
+    margin-top: 0.4rem !important;
+  }
+  .select-input {
+    width: 12rem;
+  }
+  .UserBasic-Form {
+    padding: 3rem 0%;
+    width: 100%;
+  }
+}
+.custom-container-input {
+  margin: 0 auto;
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+textarea {
+  height: 5rem;
+  padding: 0.5rem;
+  border: none;
+  outline: 0.001rem solid gray;
+  outline: 0.001rem solid gray;
+  border-radius: 3px;
+  margin-top: 1rem;
+}
+textarea:active, textarea:visited, textarea:focus {
+  outline: 2px solid blue;
+}
+
+@media screen and (max-width: 600px) {
+  .inputsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
 }/*# sourceMappingURL=style.css.map */

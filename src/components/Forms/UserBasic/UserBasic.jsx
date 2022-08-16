@@ -1,12 +1,10 @@
 import React from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-// import SendIcon from '@mui/icons-material/Send';
 import Button from '@mui/material/Button';
 
 
 const UserBasic = (prop) => {
-  console.log(prop);
   return (
     <Box
       className='UserBasic-Form'
@@ -20,20 +18,36 @@ const UserBasic = (prop) => {
       <form action="#">
       <div className='inputsContainer'>
         <TextField
-          label="Enter First Name"
+          label="Enter first name"
           helperText="Incorrect entry."
         />
         <TextField
-          label="Enter Last Name"
+          label="Enter last name"
         />
       </div>
       <div className='inputsContainer'>
         <TextField
-          label="Enter First-Name"
+          label="Enter father name"
         />
-        <input type="date" name="" id="" />
+         <TextField
+          // label="Enter father name"
+          type='date'
+          helperText="required date. of birth"
 
+        />
+        
       </div>
+      <div className='inputsContainer'>
+      <TextField
+        label="Your email-address"
+        type='email'
+        helperText="Incorrect entry."
+      />
+      <TextField
+        label="Your phone number"
+        type='number'
+      />
+    </div>
       <Button variant="contained" endIcon='✔' type='submit' onClick={(e)=> {
         e.preventDefault()
         prop.next()

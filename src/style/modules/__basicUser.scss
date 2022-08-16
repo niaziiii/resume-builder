@@ -25,22 +25,8 @@
     margin-top: 1rem;
     cursor: pointer;
 }
-.inputsContainer{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: .3rem 0;
-    height: 5rem;
-}
 
-.inputsContainer input[type="date"]{
-    flex: 0 0 40%;
-    padding: 0 .5rem;
-    height: 3rem;
-    align-self: center;
-    margin: 0 .6rem;
-    border: 1px solid rgb(204, 201, 201);
-}
+
 
 @media screen and (max-width: 800px) {
   .UserBasic-Form{

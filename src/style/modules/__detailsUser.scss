@@ -1,3 +1,7 @@
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: transparent !important;
+}
+
 .previ-next-button{
     display: flex;
     flex-direction: row;
@@ -7,5 +11,44 @@
     button{
         width: 7rem;
         padding: .3rem 0 !important;
+    }
+}
+.select-input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem;
+    // width: 100%;
+    flex: 0 0 46%;
+    // background-color: red !important;
+    label{
+        flex: 1;
+        // margin-left: .5rem?;
+    }
+    div{
+        flex: 2;
+
+    }
+}
+
+@media screen and (max-width:600px) {
+    .previ-next-button{
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        button{
+            width: auto;
+            margin: 0% !important;
+            padding: .5rem 1rem !important;
+            margin-top: .4rem !important;
+
+        }
+    }
+    .select-input{
+        width: 12rem;
+    }
+    .UserBasic-Form {
+        padding: 3rem 0%;
+        width: 100%;
     }
 }
