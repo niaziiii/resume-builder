@@ -19,7 +19,7 @@ function UserInfo() {
         case 3:
             return <rendersComponets.UserJobInfo next={nextPage} prev={prevPage}/>
         case 4:
-            return <rendersComponets.UserSuccess />
+            return <rendersComponets.UserSuccess prev={prevPage}/>
         default:
             break;
     }
