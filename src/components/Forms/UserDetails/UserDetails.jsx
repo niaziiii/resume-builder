@@ -5,7 +5,6 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
-import InputLabel from '@mui/material/InputLabel';
 import TextareaAutosize from '@mui/base/TextareaAutosize';
 
 const UserDetails = (prop) => {
@@ -24,7 +23,7 @@ const UserDetails = (prop) => {
           <TextField
             label="Your High school"
             type='email'
-            // helperText="Incorrect entry."
+          // helperText="Incorrect entry."
           />
           <TextField
             label="Your University name"
@@ -72,12 +71,12 @@ const UserDetails = (prop) => {
           </div>
         </div>
         <div className='inputsContainer'>
-        <TextareaAutosize
-      aria-label="empty textarea"
-      placeholder="About yourself"
-      type='trxt-area'
-      style={{ width: 200, height:80 }}
-    />
+          <TextareaAutosize
+            aria-label="empty textarea"
+            placeholder="About yourself"
+            type='trxt-area'
+            style={{ width: 200, height: 80 }}
+          />
 
         </div>
         <Stack direction="row" spacing={20} className="previ-next-button">

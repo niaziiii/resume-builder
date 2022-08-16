@@ -94,6 +94,31 @@
     width: 100%;
   }
 }
+.jobInputsContainer {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+.jobInputsContainer div label {
+  line-height: 0.8rem;
+  font-size: 0.7rem;
+}
+.jobInputsContainer div label:active, .jobInputsContainer div label:focus, .jobInputsContainer div label:visited {
+  line-height: 1rem;
+}
+.jobInputsContainer input {
+  height: 0.4rem;
+  margin: 0%;
+}
+.jobInputsContainer textarea {
+  margin: 0 8px 8px 8px !important;
+  width: 90%;
+  min-height: 5rem !important;
+}
+
 .custom-container-input {
   margin: 0 auto;
 }

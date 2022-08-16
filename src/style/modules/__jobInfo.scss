@@ -1,0 +1,29 @@
+.jobInputsContainer{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 1rem 0;
+    div{
+        label{
+            line-height: .8rem;
+            font-size: .7rem;
+            &:active,
+            &:focus,
+            &:visited{
+                line-height: 1rem;
+            }
+        }
+    }
+    input{
+        height: .4rem;
+        margin: 0%;
+    }
+    textarea{
+        margin: 0 8px 8px 8px !important;
+        width: 90%;
+        min-height: 5rem !important;
+    }
+
+}
