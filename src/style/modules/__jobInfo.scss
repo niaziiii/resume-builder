@@ -27,6 +27,10 @@
     }
 
 }
-.userJobInfo{
-    padding: 0 2rem;
+// .userJobInfo{
+//     padding: 0 2rem;
+// }
+
+@media screen and (max-width:600px) {
+   .userJobInfo {padding: 0 .5rem;}
 }

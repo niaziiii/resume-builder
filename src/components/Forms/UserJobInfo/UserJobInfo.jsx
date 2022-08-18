@@ -13,8 +13,12 @@ const UserJobInfo = (prop) => {
     initialValues: userJobInfoInputs.inputs,
     validationSchema: yup.object(userJobInfoInputs.validationObject),
     onSubmit: (values) => {
-      console.log(values);
+      prop.setUserData(prev => ({
+        ...prev,
+        jobInfo: values,
+      }))
       prop.next()
+
     }
   })
 

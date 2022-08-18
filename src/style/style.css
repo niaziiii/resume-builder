@@ -115,10 +115,11 @@
   min-height: 5rem !important;
 }
 
-.userJobInfo {
-  padding: 0 2rem;
+@media screen and (max-width: 600px) {
+  .userJobInfo {
+    padding: 0 0.5rem;
+  }
 }
-
 .custom-container-input {
   margin: 0 auto;
 }

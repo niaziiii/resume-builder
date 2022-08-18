@@ -13,7 +13,12 @@ const UserBasic = (prop) => {
     },
     validationSchema: yup.object(userBasicInputs.validationObject),
     onSubmit : (value) => {
+      prop.setUserData(prev => ({
+        ...prev,
+        basic: value,
+      }))
       prop.next()
+
     }
   })
   const formAction = formIK.props.value;

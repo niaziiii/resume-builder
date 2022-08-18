@@ -18,8 +18,12 @@ const UserDetails = (prop) => {
     },
     validationSchema: yup.object(userDetailsInput.validationObject),
     onSubmit: (value) => {
-      console.log(value);
+      prop.setUserData(prev => ({
+        ...prev,
+        details: value,
+      }))
       prop.next()
+
     }
   })
   const action = formIK.props.value;
