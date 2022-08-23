@@ -3,13 +3,13 @@ import rendersComponets from './../Forms/index';
 
 
 
-function UserInfo() {
+function UserInfo(prop) {
+    console.log(prop);
     const [userData, setUserData] = React.useState({
         basic: {},
         details: {},
         jobInfo: {},
     })
-    console.log(userData);
     const [stage, setStage] = React.useState(1)
     const nextPage = () => {
         if (stage >= 4) return;
@@ -20,6 +20,15 @@ function UserInfo() {
         setStage(prev => prev -= 1)
     }
 
+
+
+    if (prop.user === null) {
+        return (
+            <div className="notlogin">
+                <h1>User currently not login</h1>
+            </div>
+        )
+    }
 
 
     switch (stage) {

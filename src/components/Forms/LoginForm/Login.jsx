@@ -1,40 +1,74 @@
 import React from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { Formik } from 'formik';
+import * as yup from "yup";
+import { useHistory } from 'react-router-dom';
 
-const Login = () => {
+
+const validateUser = {
+    email: yup.string()
+        .required('email is required'),
+    password: yup.string()
+        .min(8, 'password must be grater than 7 character')
+        .required('password must be required')
+}
+
+
+const Login = (prop) => {
+    const history = useHistory();
+
+    const formik = Formik({
+        initialValues: {
+            email: '',
+            password: ''
+        },
+        validationSchema: yup.object(validateUser),
+        onSubmit: (value) => {
+            console.log(value);
+            prop.setUser({
+                name: "Niazi"
+            })
+
+
+            console.log(prop);
+            history.push("/resume");
+ 
+        }
+    })
+    const formData = formik.props.value;
+
     return (
         <div className='login-form'>
             <div className="login-form__container">
-                <form action="#">
+                <form action="#" onSubmit={(e) => {
+                    e.preventDefault()
+                    formData.handleSubmit()
+                }}>
                     <h2>Login </h2>
                     <TextField
                         label="Enter Email Address"
-                        id="emailaddress"
-                        name="emailaddress"
+                        id="email"
+                        name="email"
                         type="email"
-                        //   onChange={formAction.handleChange}
-                        //   onBlur={formAction.handleBlur}
-                        //   value={formAction.values.emailaddress}
-                        //   helperText={formAction.touched.emailaddress && formAction.errors.emailaddress ?formAction.errors.firstName : null}
-                        // helperText='Email Address'
+                        onChange={formData.handleChange}
+                        onBlur={formData.handleBlur}
+                        value={formData.values.email}
+                        helperText={formData.touched.email && formData.errors.email ? formData.errors.email : null}
                     />
-                    <br/><br/>
+                    <br /><br />
                     <TextField
                         label="Enter Your Password"
                         id="password"
                         name="password"
                         type="password"
-                        //   onChange={formAction.handleChange}
-                        //   onBlur={formAction.handleBlur}
-                        //   value={formAction.values.password}
-                        //   helperText={formAction.touched.password && formAction.errors.password ?formAction.errors.firstName : null}
-                        // helperText='Your Password'
+                        onChange={formData.handleChange}
+                        onBlur={formData.handleBlur}
+                        value={formData.values.password}
+                        helperText={formData.touched.password && formData.errors.password ? formData.errors.password : null}
                     />
-                    <br/><br/>
-                    <Button variant="contained" endIcon='✔' type='submit' >
-                        Login
-                    </Button>
+                    <br /><br />
+                    <Button variant="contained" endIcon='✔' type='submit' > Login </Button>
                 </form>
             </div>
         </div>

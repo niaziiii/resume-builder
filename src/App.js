@@ -7,22 +7,29 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Login from './components/Forms/LoginForm/Login'
 
 
+
 function App() {
+  const [user, setUser] = React.useState(null)
+  console.log(user);
   return (
     <Router>
       <div>
-        <NavigationBar />
         <Switch>
+
           <Route exact path='/' >
+            <NavigationBar user={user} setUser={setUser} />
             {<div>hey</div>}
           </Route>
+
           <Route path='/login'>
-            <Login/>
+            <NavigationBar user={user} setUser={setUser} />
+            <Login user={user} setUser={setUser} />
           </Route>
 
           <Route path='/resume'>
+            <NavigationBar user={user} setUser={setUser} />
             {< div className='container-main'>
-              <UserInfo />
+              <UserInfo user={user} />
             </div>}
           </Route>
 
