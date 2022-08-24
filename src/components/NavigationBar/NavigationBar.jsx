@@ -6,10 +6,27 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { Link } from 'react-router-dom'
-// import MenuIcon from '@mui/material';
+import Cookies from 'universal-cookie';
+import { useHistory } from 'react-router-dom';
+
+
+const logoutuser = (prop, history) => {
+  // get cookie
+  const cookie = new Cookies();
+
+  // set new cookie value
+  cookie.set('jwt', 'logout')
+
+  // set state of app
+  prop.setUser(null)
+
+  // redirect to home page
+  history.push('/')
+}
 
 export default function NavigationBar(prop) {
-  // console.log(prop);
+  const history = useHistory();
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -29,10 +46,9 @@ export default function NavigationBar(prop) {
           {
             prop.user ?
               <span className='userHeader'>
-              <h2>{prop.user.name}</h2>
-              <button>logout</button>
+                <h2>{prop.user.firstName}</h2>
+                <button onClick={() => logoutuser(prop, history)}>logout</button>
               </span>
-
               : <Button color="inherit" ><Link to='/login' className='userHeaderlogout'>Login</Link></Button>
           }
 
