@@ -4,8 +4,12 @@ import Button from '@mui/material/Button';
 import { Formik } from 'formik';
 import * as yup from "yup";
 import { useHistory } from 'react-router-dom';
+import axios from 'axios'
+import Cookies from 'universal-cookie';
 
 
+
+// formik values validation object
 const validateUser = {
     email: yup.string()
         .required('email is required'),
@@ -15,27 +19,55 @@ const validateUser = {
 }
 
 
+const getUser = async (data, props, history) => {
+    // getting universal-cookie token component
+    const cookies = new Cookies();
+    try {
+        const user = await axios({
+            method: 'POST',
+            url: 'http://localhost:4000/api/v1/login',
+            data: {
+                ...data
+            }
+        });
+
+        if (!user.data.status === 'success') return;
+
+        // set cookie of jwt token
+        cookies.set('jwt', `${user.data.token}`, { path: '/' });
+
+        // set user to state of application
+        props.setUser(user.data.data.user)
+
+        history.push("/resume");
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+
+
+
+
+
 const Login = (prop) => {
+    // create redirect history function ;
     const history = useHistory();
 
+    // use react formik library to validate form data and submit form
     const formik = Formik({
         initialValues: {
             email: '',
             password: ''
         },
         validationSchema: yup.object(validateUser),
-        onSubmit: (value) => {
-            console.log(value);
-            prop.setUser({
-                name: "Niazi"
-            })
-
-
-            console.log(prop);
-            history.push("/resume");
- 
+        onSubmit: async (value) => {
+            await getUser(value, prop, history)
         }
     })
+
+    // getting intance from formik component library
     const formData = formik.props.value;
 
     return (
