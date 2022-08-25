@@ -3,7 +3,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import { Link } from 'react-router-dom'
 import Cookies from 'universal-cookie';
@@ -49,7 +48,7 @@ export default function NavigationBar(prop) {
                 <h2>{prop.user.firstName}</h2>
                 <button onClick={() => logoutuser(prop, history)}>logout</button>
               </span>
-              : <Button color="inherit" ><Link to='/login' className='userHeaderlogout'>Login</Link></Button>
+              : <Link to='/login' className='userHeaderlogout'>Login</Link>
           }
 
         </Toolbar>
