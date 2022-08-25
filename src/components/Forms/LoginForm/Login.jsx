@@ -25,7 +25,7 @@ const getUser = async (data, props, history) => {
     try {
         const user = await axios({
             method: 'POST',
-            url: 'http://localhost:4000/api/v1/login',
+            url: 'https://mk-resume-builder.herokuapp.com/api/v1/login',
             data: {
                 ...data
             }

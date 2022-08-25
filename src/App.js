@@ -1,4 +1,5 @@
 import { React, useEffect, useState } from 'react'
+// import { ReactDOM } from 'react'
 import NavigationBar from './components/NavigationBar/NavigationBar'
 import UserInfo from './components/UserInfo/UserInfo'
 import './style/style.css'
@@ -10,20 +11,22 @@ import checkUser from './contstrains/isLoggedIn'
 
 function App() {
   const [user, setUser] = useState(null)
+  const [animation, setAnimation] = useState(true)
+
   // using useEffect to check user logged in
   useEffect(() => {
     const getUser= async () => {
-      await checkUser({ setUser });
+      await checkUser({ setUser,setAnimation });
     };
-    return () => {
-      getUser(); // run it, run it
-    };
+    return () => getUser(); 
   }, []);
 
 
   return (
     <Router>
-      <div>
+      <div className='app'>
+        {animation ? <div className='app__mainAniamtion'><span>🧾</span></div> : ""}
+        
         <Switch>
           <Route exact path='/' >
             <NavigationBar user={user} setUser={setUser} />

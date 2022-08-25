@@ -181,6 +181,22 @@
     padding: 5rem 1rem;
   }
 }
+.app__mainAniamtion {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: #000046;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app__mainAniamtion span {
+  font-size: 5rem;
+}
+
 .css-hip9hq-MuiPaper-root-MuiAppBar-root {
   background: linear-gradient(to right, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
