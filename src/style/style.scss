@@ -4,11 +4,22 @@
 }
 
 
+@import './modules/_homePage';
+@import './modules/_navigation';
 @import './modules/_basicUser';
 @import './modules/_detailsUser';
 @import './modules/_jobInfo';
 @import './modules/_form';
 
+.notlogin{
+    width: 100%;
+    min-height: 95vh;
+    display: flex;
+    h1{
+        width: 80%;
+        margin: 5rem auto;
+    }
+}
 .app__mainAniamtion{
     width: 100%;
     min-height: 100vh;
@@ -29,49 +40,8 @@
     background: linear-gradient(to right, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.userHeader{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    
-     button{
-        margin-left: 1rem;
-        background-color: white;
-        border: none;
-        padding: .2rem .5rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: .4s all;
-        border-radius: .4rem;
-        &:hover{
-            background-color: rgb(224, 220, 220);
-        }
-    }
-}
-.userHeaderlogout{
-    color: black;
-    margin-left: 1rem;
-    background-color: white;
-    text-decoration: none;
-    border: none;
-    padding: .2rem .5rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: .4s all;
-    border-radius: .4rem;
-    letter-spacing: -0.01rem;
-    text-transform: none;
 
-    &:hover{
-    background-color: rgb(224, 220, 220);
-    }
-}
-.resume-builder-heading{
-    color: white;
-    text-decoration: none;
-    font-size: 2rem;
-    letter-spacing: -0.01rem;
-}
+
 
 .custom-container-input{
     margin:  0 auto;
@@ -106,4 +76,33 @@ textarea{
         font-size: 1rem;
     }
 }
+
+
+.slide-bottom {
+    -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @-webkit-keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(-25%);
+              transform: translateY(-25%);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-bottom {
+    0% {
+      -webkit-transform: translateY(-25%);
+              transform: translateY(-25%);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  
 

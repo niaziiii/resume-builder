@@ -3,6 +3,213 @@
   padding: 0%;
 }
 
+.app__Home {
+  width: 100%;
+  background-color: white;
+  overflow: hidden;
+}
+.app__Home__container {
+  min-height: 95vh;
+  max-height: 95vh;
+  margin: auto;
+  background: linear-gradient(to right, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 3rem;
+}
+.app__Home__text {
+  flex: 0 0 50%;
+}
+.app__Home__text h1 {
+  font-weight: 900;
+  font-size: 102px;
+  line-height: 99.2px;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  text-shadow: 0 0 1px white;
+  color: #1976d2;
+}
+.app__Home__text p {
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 22px;
+  margin: 1rem 0 2rem 0;
+  width: 90%;
+}
+.app__Home__text .home-link-resume {
+  text-decoration: none;
+  color: white;
+}
+.app__Home__animation {
+  flex: 1;
+}
+.app__Home__animation .lottie-container {
+  margin-top: 4rem;
+}
+.app__Home__animation .lottie-container div {
+  width: 80%;
+}
+
+@media screen and (max-width: 1600px) {
+  .app__Home__text {
+    margin-top: -4rem;
+  }
+  .app__Home__text h1 {
+    font-size: 70px;
+    line-height: 88px;
+  }
+  .app__Home__animation .lottie-container {
+    margin-top: 6rem;
+  }
+}
+@media screen and (max-width: 1450px) {
+  .app__Home__text h1 {
+    font-size: 60px;
+    line-height: 78px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .app__Home__text {
+    margin-top: -4rem;
+  }
+  .app__Home__text h1 {
+    font-size: 50px;
+    line-height: 68px;
+  }
+  .app__Home__animation .lottie-container {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .app__Home__container {
+    flex-direction: column;
+    min-height: 100vh;
+    max-height: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .app__Home__text {
+    margin-top: 4rem;
+  }
+  .app__Home__text h1 {
+    font-size: 50px;
+    line-height: 68px;
+  }
+  .app__Home__animation {
+    width: 100%;
+  }
+  .app__Home__animation .lottie-container {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .app__Home__text {
+    margin-top: 3rem;
+    margin-left: 1rem;
+  }
+  .app__Home__text h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .app__Home__text p {
+    font-size: 18px;
+  }
+  .app__Home__animation .lottie-container {
+    margin-top: 3rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .app__Home__container {
+    padding: 0 1rem;
+  }
+}
+.app__main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 3rem;
+  background: #000046;
+  box-shadow: 1px 0 1px white;
+}
+.app__main-nav__logo .logo-container {
+  font-weight: 900;
+  font-size: 3rem;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  text-shadow: 0 0 1px white;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+.userHeaderlogout {
+  color: black;
+  margin-left: 1rem;
+  background-color: white;
+  text-decoration: none;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s all;
+  border-radius: 0.4rem;
+  letter-spacing: -0.01rem;
+  text-transform: none;
+}
+.userHeaderlogout:hover {
+  background-color: rgb(224, 220, 220);
+}
+
+.userHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.userHeader h2 {
+  color: white;
+}
+.userHeader button {
+  margin-left: 1rem;
+  background-color: white;
+  border: none;
+  padding: 0.2rem 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s all;
+  border-radius: 0.4rem;
+}
+.userHeader button:hover {
+  background-color: rgb(224, 220, 220);
+}
+
+@media screen and (max-width: 650px) {
+  .userHeader h2 {
+    font-size: 0.75rem;
+  }
+  .app__main-nav {
+    padding: 1rem;
+  }
+  .app__main-nav__logo .logo-container {
+    font-size: 1.75rem;
+    letter-spacing: -0.09rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .userHeaderlogout {
+    font-size: 0.7rem;
+  }
+  .app__main-nav {
+    padding: 1rem;
+  }
+  .app__main-nav__logo .logo-container {
+    font-size: 1.25rem;
+    letter-spacing: -0.09rem;
+  }
+}
 .container-main {
   background-color: #ffffff;
   background: linear-gradient(to right, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -181,6 +388,16 @@
     padding: 5rem 1rem;
   }
 }
+.notlogin {
+  width: 100%;
+  min-height: 95vh;
+  display: flex;
+}
+.notlogin h1 {
+  width: 80%;
+  margin: 5rem auto;
+}
+
 .app__mainAniamtion {
   width: 100%;
   min-height: 100vh;
@@ -199,50 +416,6 @@
 
 .css-hip9hq-MuiPaper-root-MuiAppBar-root {
   background: linear-gradient(to right, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.userHeader {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.userHeader button {
-  margin-left: 1rem;
-  background-color: white;
-  border: none;
-  padding: 0.2rem 0.5rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.4s all;
-  border-radius: 0.4rem;
-}
-.userHeader button:hover {
-  background-color: rgb(224, 220, 220);
-}
-
-.userHeaderlogout {
-  color: black;
-  margin-left: 1rem;
-  background-color: white;
-  text-decoration: none;
-  border: none;
-  padding: 0.2rem 0.5rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.4s all;
-  border-radius: 0.4rem;
-  letter-spacing: -0.01rem;
-  text-transform: none;
-}
-.userHeaderlogout:hover {
-  background-color: rgb(224, 220, 220);
-}
-
-.resume-builder-heading {
-  color: white;
-  text-decoration: none;
-  font-size: 2rem;
-  letter-spacing: -0.01rem;
 }
 
 .custom-container-input {
@@ -275,5 +448,26 @@ textarea:active, textarea:visited, textarea:focus {
   }
   .resume-builder-heading {
     font-size: 1rem;
+  }
+}
+.slide-bottom {
+  -webkit-animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-bottom {
+  0% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-bottom {
+  0% {
+    transform: translateY(-25%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */

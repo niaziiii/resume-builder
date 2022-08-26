@@ -1,0 +1,181 @@
+.app__Home{
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    &__container{
+        min-height: 95vh;
+        max-height: 95vh;
+        margin: auto;
+        background: linear-gradient(to right, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0rem 3rem;
+    }
+
+    &__text{ 
+        flex: 0 0 50%;
+        // background-color: red;
+        h1{
+            font-weight: 900;
+            font-size: 102px;
+            line-height: 99.2px;
+            letter-spacing: 0.04em;
+            text-transform: capitalize;
+            text-shadow: 0 0 1px white;
+            // color: black;
+            color: #1976d2;
+
+        }
+        p{
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            text-transform: capitalize;
+            line-height: 28px;
+            font-size: 22px;
+            margin: 1rem 0 2rem 0;
+            width: 90%;
+        }
+        .home-link-resume{
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+
+    &__animation{
+        flex: 1;
+        // height: 80%;
+        .lottie-container{
+            margin-top: 4rem;
+            div{width: 80%;}
+        }
+    }
+}
+
+
+@media screen and (max-width:1600px) {
+    .app__Home{
+        &__text{
+            margin-top: -4rem;
+            h1{
+                font-size: 70px;
+                line-height: 88px;
+            }
+        }
+        &__animation{
+            .lottie-container{
+                margin-top: 6rem;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:1450px) {
+    .app__Home{
+        &__text{
+            h1{
+                font-size: 60px;
+                line-height: 78px;
+            }
+        }
+
+    }
+}
+@media screen and (max-width:1200px) {
+    .app__Home{
+        &__text{
+            margin-top: -4rem;
+            h1{
+                font-size: 50px;
+                line-height: 68px;
+            }
+        }
+        &__animation{
+            .lottie-container{
+                margin-top: 2rem;
+            }
+        }
+
+    }
+}
+
+
+
+
+@media screen and (max-width:1050px) {
+    .app__Home{
+        &__container{
+            flex-direction: column;
+            min-height: 100vh;
+            max-height: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__text{
+            margin-top: 4rem;
+            h1{
+                font-size: 50px;
+                line-height: 68px;
+            }
+        }
+        &__animation{
+            width: 100%;
+            .lottie-container{
+                margin-top: 2rem;
+            }
+        }
+
+    }
+}
+
+
+
+@media screen and (max-width:750px) {
+    .app__Home{
+        &__text{
+            margin-top: 3rem;
+            // text-align: center;
+            margin-left: 1rem;
+            h1{
+                font-size: 40px;
+                line-height: 40px;
+            }
+            p{font-size: 18px;}
+        }
+        &__animation{
+            .lottie-container{
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width:600px) {
+    .app__Home{
+        &__container{
+            padding: 0 1rem;
+
+        }
+        // &__text{
+        //     margin-top: 4rem;
+        //     h1{
+        //         font-size: 50px;
+        //         line-height: 68px;
+        //     }
+        // }
+        // &__animation{
+        //     width: 100%;
+        //     .lottie-container{
+        //         margin-top: 2rem;
+        //     }
+        // }
+
+    }
+}
