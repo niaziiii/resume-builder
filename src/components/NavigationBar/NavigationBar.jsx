@@ -27,32 +27,52 @@ export default function NavigationBar(prop) {
   const history = useHistory();
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            {/* {<img src={one} alt="" />} */}
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link to='/' className='resume-builder-heading'>Resume Builder</Link>
-          </Typography>
-          {
-            prop.user ?
-              <span className='userHeader'>
-                <h2>{prop.user.firstName}</h2>
-                <button onClick={() => logoutuser(prop, history)}>logout</button>
-              </span>
-              : <Link to='/login' className='userHeaderlogout'>Login</Link>
-          }
+    <div className='app__main-nav'>
+      <div className="app__main-nav__logo"><Link to='/' className='logo-container'>Resume Builder</Link></div>
+      <div className="app__main-nav__menu"> 
+      {
+        prop.user?
+        <span className='userHeader'>
+                      <h2>{prop.user.firstName}</h2>
+                     <button onClick={() => logoutuser(prop, history)}>logout</button>
+                 </span>:
+                 <span className='userHeader'>
+                  <Link to='/login' className='userHeaderlogout'>Login</Link>
+                  <Link to='/signup' className='userHeaderlogout'>Sign up</Link>
+                 </span>
+               
+                 
+      }
+      
+      </div>
+       </div>
+    // <Box sx={{ flexGrow: 1 }}>
+    //   <AppBar position="static">
+    //     <Toolbar>
+    //       <IconButton
+    //         size="large"
+    //         edge="start"
+    //         color="inherit"
+    //         aria-label="menu"
+    //         sx={{ mr: 2 }}
+    //       >
+    //         {/* {<img src={one} alt="" />} */}
+    //       </IconButton>
+    //       <Typography variant="h2" component="div" sx={{ flexGrow: 0 }}>
+    //         <Link to='/' className='resume-builder-heading'>Resume Builder</Link>
+    //       </Typography>
+    //       {
+    //         prop.user ?
+    //           <span className='userHeader'>
+    //             <h2>{prop.user.firstName}</h2>
+    //             <button onClick={() => logoutuser(prop, history)}>logout</button>
+    //           </span>
+    //           : <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}><Link to='/login' className='userHeaderlogout'>Login</Link></Typography>
+            
+    //       }
 
-        </Toolbar>
-      </AppBar>
-    </Box>
+    //     </Toolbar>
+    //   </AppBar>
+    // </Box>
   )
 }

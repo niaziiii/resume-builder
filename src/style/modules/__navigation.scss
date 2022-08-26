@@ -1,0 +1,97 @@
+.app__main-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 3rem;
+    background:  #000046;
+    box-shadow: 1px 0 1px white;
+
+    &__logo{
+        .logo-container{
+            font-weight: 900;
+            font-size: 3rem;
+            letter-spacing: 0.04em;
+            text-transform: capitalize;
+            text-shadow: 0 0 1px white;
+            color: #1976d2;
+            text-decoration: none;
+        }
+    }
+}
+
+
+.userHeaderlogout{
+    color: black;
+    margin-left: 1rem;
+    background-color: white;
+    text-decoration: none;
+    border: none;
+    padding: .2rem .5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .4s all;
+    border-radius: .4rem;
+    letter-spacing: -0.01rem;
+    text-transform: none;
+
+    &:hover{
+    background-color: rgb(224, 220, 220);
+    }
+}
+
+
+
+.userHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    h2{
+        color: white;
+    }
+     button{
+        margin-left: 1rem;
+        background-color: white;
+        border: none;
+        padding: .2rem .5rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: .4s all;
+        border-radius: .4rem;
+        &:hover{
+            background-color: rgb(224, 220, 220);
+        }
+    }
+}
+
+@media screen and (max-width:650px) {
+    .userHeader{
+        h2{
+            font-size: .75rem;
+        }
+    }
+    .app__main-nav{
+        padding: 1rem;
+        &__logo{
+            .logo-container{
+                font-size: 1.75rem;
+                letter-spacing: -0.09rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:450px) {
+    .userHeaderlogout{
+        font-size: .7rem;
+    }
+    .app__main-nav{
+        padding: 1rem;
+        &__logo{
+            .logo-container{
+                font-size: 1.25rem;
+                letter-spacing: -0.09rem;
+            }
+        }
+    }
+}

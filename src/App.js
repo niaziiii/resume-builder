@@ -7,7 +7,7 @@ import './style/style.css'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Login from './components/Forms/LoginForm/Login'
 import checkUser from './contstrains/isLoggedIn'
-
+import HomePage from './components/Home/HomePage'
 
 function App() {
   const [user, setUser] = useState(null)
@@ -15,22 +15,22 @@ function App() {
 
   // using useEffect to check user logged in
   useEffect(() => {
-    const getUser= async () => {
-      await checkUser({ setUser,setAnimation });
+    const getUser = async () => {
+      await checkUser({ setUser, setAnimation });
     };
-    return () => getUser(); 
+    return () => getUser();
   }, []);
 
 
   return (
     <Router>
       <div className='app'>
-        {animation ? <div className='app__mainAniamtion'><span>🧾</span></div> : ""}
-        
+        {animation ? <div className='app__mainAniamtion slide-bottom'><span>🧾</span></div> : ""}
+
         <Switch>
           <Route exact path='/' >
             <NavigationBar user={user} setUser={setUser} />
-            {<div>hey</div>}
+            <HomePage />
           </Route>
 
 

@@ -25,7 +25,7 @@ function UserInfo(prop) {
     if (prop.user === null) {
         return (
             <div className="notlogin">
-                <h1>User currently not login</h1>
+                <h1>You are not logged In. <br /> Kindly Login 😀</h1>
             </div>
         )
     }
