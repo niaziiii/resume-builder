@@ -1,9 +1,4 @@
 import React from 'react'
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
 import { Link } from 'react-router-dom'
 import Cookies from 'universal-cookie';
 import { useHistory } from 'react-router-dom';
@@ -33,7 +28,7 @@ export default function NavigationBar(prop) {
       {
         prop.user?
         <span className='userHeader'>
-                      <h2>{prop.user.firstName}</h2>
+                      <h2>{prop.user.firstName.charAt(0).toUpperCase() + prop.user.firstName.slice(1)}</h2>
                      <button onClick={() => logoutuser(prop, history)}>logout</button>
                  </span>:
                  <span className='userHeader'>

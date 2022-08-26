@@ -1,5 +1,4 @@
 import { React, useEffect, useState } from 'react'
-// import { ReactDOM } from 'react'
 import NavigationBar from './components/NavigationBar/NavigationBar'
 import UserInfo from './components/UserInfo/UserInfo'
 import './style/style.css'
@@ -8,6 +7,9 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Login from './components/Forms/LoginForm/Login'
 import checkUser from './contstrains/isLoggedIn'
 import HomePage from './components/Home/HomePage'
+import SignForm from './components/Forms/SignupForm/signForm'
+
+
 
 function App() {
   const [user, setUser] = useState(null)
@@ -33,6 +35,10 @@ function App() {
             <HomePage />
           </Route>
 
+          <Route path='/signup'>
+            <NavigationBar user={user} setUser={setUser} />
+            <SignForm user={user} setUser={setUser} />
+          </Route>
 
           <Route path='/login'>
             <NavigationBar user={user} setUser={setUser} />
