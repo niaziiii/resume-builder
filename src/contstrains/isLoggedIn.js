@@ -14,7 +14,7 @@ const checkUser = async (prop) => {
       
       const user = await axios({
         method: 'POST',
-        url: 'http://localhost:4000/api/v1/loggedIn',
+        url: 'https://mk-resume-builder.herokuapp.com/api/v1/loggedIn',
         data: {
           token
         }
