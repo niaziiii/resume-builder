@@ -1,9 +1,7 @@
 import axios from 'axios'
 import Cookies from 'universal-cookie';
 
-console.log(document.getElementsByTagName('body'));
 const checkUser = async (prop) => {
-  console.log(prop);
     const cookie = new Cookies()
   
     try {
@@ -16,7 +14,7 @@ const checkUser = async (prop) => {
       
       const user = await axios({
         method: 'POST',
-        url: 'https://mk-resume-builder.herokuapp.com/api/v1/loggedIn',
+        url: 'http://localhost:4000/api/v1/loggedIn',
         data: {
           token
         }

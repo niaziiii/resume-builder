@@ -1,5 +1,5 @@
 import React from 'react'
-import rendersComponets from './../Forms/index';
+import rendersComponets from '../Forms/index';
 
 
 // stepper for status
