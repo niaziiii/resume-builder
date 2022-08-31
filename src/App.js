@@ -1,13 +1,10 @@
 import { React, useEffect, useState } from 'react'
-import NavigationBar from './components/NavigationBar/NavigationBar'
-import UserInfo from './components/UserInfo/UserInfo'
 import './style/style.css'
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Login from './components/Forms/LoginForm/Login'
+// import { BrowserRouter as Router, Route ,BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import checkUser from './contstrains/isLoggedIn'
-import HomePage from './components/Home/HomePage'
-import SignForm from './components/Forms/SignupForm/signForm'
+import  {Home,LoginUser,SignUser,Resume} from './components/index';
 
 
 
@@ -25,37 +22,17 @@ function App() {
 
 
   return (
-    <Router>
-      <div className='app'>
-        {animation ? <div className='app__mainAniamtion slide-bottom'><span>🧾</span></div> : ""}
-
-        <Switch>
-          <Route exact path='/' >
-            <NavigationBar user={user} setUser={setUser} />
-            <HomePage />
-          </Route>
-
-          <Route path='/signup'>
-            <NavigationBar user={user} setUser={setUser} />
-            <SignForm user={user} setUser={setUser} />
-          </Route>
-
-          <Route path='/login'>
-            <NavigationBar user={user} setUser={setUser} />
-            <Login user={user} setUser={setUser} />
-          </Route>
-
-
-          <Route path='/resume'>
-            <NavigationBar user={user} setUser={setUser} />
-            {< div className='container-main'>
-              <UserInfo user={user} />
-            </div>}
-          </Route>
-        </Switch>
-
-      </div>
-    </Router >
+    <>
+      {animation ? <div className='app__mainAniamtion slide-bottom'><span>🧾</span></div> : ""}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home user={user} setUser={setUser} />}></Route>
+          <Route path="/resume" element={<Resume user={user} setUser={setUser} />}></Route>
+          <Route path="/login" element={<LoginUser user={user} setUser={setUser} />}></Route>
+          <Route path="/signup" element={<SignUser user={user} setUser={setUser}/>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
