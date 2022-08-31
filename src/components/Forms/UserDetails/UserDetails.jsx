@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
-import TextareaAutosize from '@mui/base/TextareaAutosize';
+// import {TextareaAutosize} from '@mui/base/TextareaAutosize';
 import { InputLabel } from '@mui/material';
 import { Formik } from 'formik';
 import * as yup from 'yup'
@@ -121,7 +121,7 @@ const UserDetails = (prop) => {
         </div>
 
         <div className='inputsContainer'>
-          <TextareaAutosize
+          <textarea
             aria-label="empty textarea"
             placeholder="About yourself"
             type='text-area'

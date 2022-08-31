@@ -2,7 +2,6 @@ import React from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import TextareaAutosize from '@mui/base/TextareaAutosize';
 import userJobInfoInputs from "./userJobInfoInputs";
 import { Formik } from 'formik';
 import * as yup from 'yup'
@@ -48,7 +47,7 @@ const UserJobInfo = (prop) => {
             value={action.values.firstJob}
             helperText={action.touched.firstJob && action.errors.firstJob ? action.errors.firstJob : null}
           />
-          <TextareaAutosize
+          <textarea
             aria-label="empty textarea"
             placeholder="About yourself first job"
             type='trxt-area'
@@ -71,7 +70,7 @@ const UserJobInfo = (prop) => {
             value={action.values.secondJob}
             helperText={action.touched.secondJob && action.errors.secondJob ? action.errors.secondJob : null}
           />
-          <TextareaAutosize
+          <textarea
             aria-label="empty textarea"
             placeholder="About yourself second job"
             type='text'

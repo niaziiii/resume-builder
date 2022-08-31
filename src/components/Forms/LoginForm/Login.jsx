@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Formik } from 'formik';
 import * as yup from "yup";
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import Cookies from 'universal-cookie';
 
@@ -39,7 +39,7 @@ const getUser = async (data, props, history) => {
         // set user to state of application
         props.setUser(user.data.data.user)
 
-        history.push("/resume");
+        history("/");
 
     } catch (error) {
         console.log(error);
@@ -53,7 +53,7 @@ const getUser = async (data, props, history) => {
 
 const Login = (prop) => {
     // create redirect history function ;
-    const history = useHistory();
+    const history = useNavigate();
 
     // use react formik library to validate form data and submit form
     const formik = Formik({

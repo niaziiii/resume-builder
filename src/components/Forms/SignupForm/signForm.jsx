@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Formik } from 'formik';
 import * as yup from "yup";
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios'
 import Cookies from 'universal-cookie';
 
@@ -34,7 +34,6 @@ const getUser = async (data, props, history) => {
             }
         });
 
-        console.log(user);
 
         if (!user.data.status === 'success') return;
 
@@ -44,7 +43,7 @@ const getUser = async (data, props, history) => {
         // set user to state of application
         props.setUser(user.data.data.user)
 
-        history.push("/resume");
+        history("/");
 
     } catch (error) {
         console.log(error);
@@ -55,7 +54,7 @@ const getUser = async (data, props, history) => {
 
 
 function SignForm(prop) {
-    const history = useHistory();
+    const history = useNavigate();
 
 
     // use react formik library to validate form data and submit form
@@ -68,7 +67,6 @@ function SignForm(prop) {
         },
         validationSchema: yup.object(validateUser),
         onSubmit: async (value) => {
-            console.log(value);
             await getUser(value, prop, history)
 
         }
