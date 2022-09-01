@@ -15,25 +15,26 @@ const logoutuser = (prop, history) => {
   prop.setUser(null)
 
   // redirect to home page
-  history('/')
+  // history('/')
 }
 
 export default function NavigationBar(prop) {
-  const history = useNavigate();
+  // const history = useNavigate();
 
   return (
     <div className='app__main-nav'>
-      <div className="app__main-nav__logo"><Link to='/' className='logo-container'>Resume Builder</Link></div>
+      {/* Link to='/' className='logo-container'>Resume Builder</Link> */}
+      <div className="app__main-nav__logo">rsu,e</div>
       <div className="app__main-nav__menu"> 
       {
         prop.user?
         <span className='userHeader'>
                       <h2>{prop.user.firstName.charAt(0).toUpperCase() + prop.user.firstName.slice(1)}</h2>
-                     <button onClick={() => logoutuser(prop, history)}>logout</button>
+                     {/* <button onClick={() => logoutuser(prop, history)}>logout</button> */}
                  </span>:
                  <span className='userHeader'>
-                  <Link to='/login' className='userHeaderlogout'>Login</Link>
-                  <Link to='/signup' className='userHeaderlogout'>Sign up</Link>
+                  {/* <Link to='/login' className='userHeaderlogout'>Login</Link> */}
+                  {/* <Link to='/signup' className='userHeaderlogout'>Sign up</Link> */}
                  </span>
                
                  
