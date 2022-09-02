@@ -4,9 +4,8 @@ import UserJobInfo from './UserJobInfo/UserJobInfo'
 import UserSuccess from './UserSuccess/UserSuccess'
 
 
-let rendersComponets;
 // eslint-disable-next-line 
-export default rendersComponets = {
+export  {
     UserBasic,
     UserJobInfo,
     UserDetails,

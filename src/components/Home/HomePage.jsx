@@ -1,20 +1,10 @@
 import React from 'react'
-// import * as animationPath from './resume.json';
-// import Lottie from 'react-lottie';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom'
-
+import backImg from "./back.png";
 
 const HomePage = () => {
 
-    // const defaultOptions = {
-    //     loop: true,
-    //     autoplay: true, 
-    //     animationData: animationPath,
-    //     rendererSettings: {
-    //       preserveAspectRatio: 'xMidYMid slice'
-    //     }
-    // }
 
    
 
@@ -29,7 +19,7 @@ const HomePage = () => {
              </Button>
             </div>
             <div className="app__Home__animation">
-                {/* <div className="lottie-container"> <Lottie options={defaultOptions}/></div> */}
+                <div className="lottie-container"><img src={backImg} alt="Background img" /></div>
             </div>
       </div>
     </div>

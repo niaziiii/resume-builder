@@ -1,5 +1,5 @@
 import React from 'react'
-import rendersComponets from '../Forms/index';
+import {UserBasic,UserSuccess,UserJobInfo,UserDetails} from '../Forms/index';
 
 
 // stepper for status
@@ -45,7 +45,7 @@ function UserInfo(prop) {
         case 1:
             return <div className='user-info-wraper'>
                 <Stepperr value={stage} />
-                <rendersComponets.UserBasic
+                <UserBasic
                     next={nextPage}
                     userData={userData}
                     setUserData={setUserData} />
@@ -53,7 +53,7 @@ function UserInfo(prop) {
         case 2:
             return <div className='user-info-wraper'>
                 <Stepperr value={stage} />
-                <rendersComponets.UserDetails
+                <UserDetails
                     next={nextPage}
                     userData={userData}
                     setUserData={setUserData}
@@ -62,7 +62,7 @@ function UserInfo(prop) {
         case 3:
             return <div className='user-info-wraper'>
                 <Stepperr value={stage} />
-                <rendersComponets.UserJobInfo
+                <UserJobInfo
                     next={nextPage}
                     userData={userData}
                     setUserData={setUserData}
@@ -71,7 +71,7 @@ function UserInfo(prop) {
         case 4:
             return <div className='user-info-wraper'>
                 <Stepperr value={stage} />
-                <rendersComponets.UserSuccess
+                <UserSuccess
                     userData={userData}
                     setUserData={setUserData}
                 />

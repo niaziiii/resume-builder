@@ -1,41 +1,33 @@
-import { React, useState } from 'react'
-import { useEffect } from 'react'
-
+import React, { useState, useEffect } from "react";
 import './style/style.css'
+import { Routes, Route } from "react-router-dom";
 
-import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import { Home, LoginUser, SignUpUser, ResumeBuilder } from "./components/comp";
 import checkUser from './contstrains/isLoggedIn'
-import  {Home,LoginUser,SignUser,Resume} from './components/index';
-
-
 
 function App() {
   const [user, setUser] = useState(null)
-  const [animation, setAnimation] = useState(true)
 
   // using useEffect to check user logged in
   useEffect(() => {
     const getUser = async () => {
-      await checkUser({ setUser, setAnimation });
+      await checkUser({ setUser });
     };
     return () => getUser();
   }, []);
-
-
   return (
-    <>
-      {animation ? <div className='app__mainAniamtion slide-bottom'><span>🧾</span></div> : ""}
+    <div className="App">
 
-       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home user={user} setUser={setUser} />}></Route>
-          <Route path="/resume" element={<Resume user={user} setUser={setUser} />}></Route>
-          <Route path="/login" element={<LoginUser user={user} setUser={setUser} />}></Route>
-          <Route path="/signup" element={<SignUser user={user} setUser={setUser}/>}></Route>
-        </Routes>
-      </BrowserRouter> 
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<Home user={user} setUser={setUser} />} />
+        <Route path="/login" element={<LoginUser user={user} setUser={setUser} />} />
+        <Route path="/signup" element={<SignUpUser user={user} setUser={setUser} />} />
+        <Route path="/resume" element={<ResumeBuilder user={user} setUser={setUser} />} />
+
+      </Routes>
+
+    </div>
+  );
 }
 
-export default App
+export default App;

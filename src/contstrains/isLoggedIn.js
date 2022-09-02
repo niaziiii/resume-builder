@@ -8,7 +8,7 @@ const checkUser = async (prop) => {
       const token = cookie.get('jwt')
       if(!token || token === 'logout') {
         setTimeout(() => {
-        return prop.setAnimation(false)
+        return 
         }, 1500);
       }  
       
@@ -21,11 +21,12 @@ const checkUser = async (prop) => {
       })
   
       if (user.data.status === 'success') prop.setUser(user.data.data.user);
-      return prop.setAnimation(false)
+      console.log(user);
+      return user
     } catch (error) {
       prop.setUser(null);
       cookie.set('jwt', 'logout', { path: '/' })
-       prop.setAnimation(false)
+       
     }
   }
   
